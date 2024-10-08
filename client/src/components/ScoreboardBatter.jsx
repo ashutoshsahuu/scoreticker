@@ -14,130 +14,130 @@ const Scoreboard = () => {
                     <p>Indian Premier League</p>
                 </div>
             </div>
-            <table class="min-w-full bg-white shadow-md rounded-lg mt-4 overflow-hidden">
-                <thead class="bg-blue-100">
+            <table className="min-w-full bg-white shadow-md rounded-lg mt-4 overflow-hidden">
+                <thead className="bg-blue-100">
                     <tr className='bg-gradient-to-b from-sky-500 to-indigo-500'>
-                        <th class="text-left px-4 py-2 border-l-0 border-r-0">
+                        <th className="text-left px-4 py-2 border-l-0 border-r-0">
                             Batsman
                         </th>
-                        <th class="text-center px-2 py-2 border-l-0 border-r-0">R</th>
-                        <th class="text-center px-2 py-2 border-l-0 border-r-0">B</th>
-                        <th class="text-center px-2 py-2 border-l-0 border-r-0">4s</th>
-                        <th class="text-center px-2 py-2 border-l-0 border-r-0">6s</th>
-                        <th class="text-center px-2 py-2 border-l-0 border-r-0">SR</th>
+                        <th className="text-center px-2 py-2 border-l-0 border-r-0">R</th>
+                        <th className="text-center px-2 py-2 border-l-0 border-r-0">B</th>
+                        <th className="text-center px-2 py-2 border-l-0 border-r-0">4s</th>
+                        <th className="text-center px-2 py-2 border-l-0 border-r-0">6s</th>
+                        <th className="text-center px-2 py-2 border-l-0 border-r-0">SR</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Rohit
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Sss
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Sss
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Sss
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Sss
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Sss
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Sss
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-white via-white via-5% to-neutral-200'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">
                             Sss
                             <br />
-                            <span class="text-sm text-gray-500">not out</span>
+                            <span className="text-sm text-gray-500">not out</span>
                         </td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0</td>
-                        <td class="border-t text-center border-l-0 border-r-0">0.00</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0</td>
+                        <td className="border-t text-center border-l-0 border-r-0">0.00</td>
                     </tr>
                     <tr className='bg-gradient-to-b from-fuchsia-500 to-pink-500 font-semibold'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">Extras</td>
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">Extras</td>
                         <td
-                            colspan="5"
-                            class="border-t text-center text-sm border-l-0 border-r-0 "
+                            colSpan="5"
+                            className="border-t text-center text-sm border-l-0 border-r-0 "
                         >
                             0 B, 0 LB, 0 WD, 0 NB
                         </td>
                     </tr>
                     <tr className='bg-gradient-to-b from-yellow-400 to-orange-600 font-bold text-xl'>
-                        <td class="border-t px-4 py-2 border-l-0 border-r-0">Total</td>
+                        <td className="border-t px-4 py-2 border-l-0 border-r-0">Total</td>
                         <td
-                            colspan="5"
-                            class="border-t text-center border-l-0 border-r-0"
+                            colSpan="5"
+                            className="border-t text-center border-l-0 border-r-0"
                         >
                             147-4 (20.0)
                         </td>

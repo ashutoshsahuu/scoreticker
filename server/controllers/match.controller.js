@@ -50,7 +50,9 @@ export const createMatch = async (req, res) => {
                 type: "",
                 fielder: ""
             },
-            onStrike: false
+            onStrike: false,
+            onNonStrike: false,
+            yetToBat: true
         }));
 
         // Prepare team2 players (as bowlers)
@@ -60,7 +62,8 @@ export const createMatch = async (req, res) => {
             maidenOvers: 0,
             runsGiven: 0,
             wicketsTaken: 0,
-            economyRate: 0
+            economyRate: 0,
+            isBowling: false
         }));
 
         // Prepare the first inning schema, where team1 is batting and team2 is bowling
@@ -143,7 +146,7 @@ export const getMatchDetails = async (req, res) => {
 
 export const startSecondInning = async (req, res) => {
     try {
-        const { matchId } = req.params;
+        const { id } = req.params;
 
         // Find the match by ID
         const match = await Match.findById(matchId);
@@ -188,7 +191,9 @@ export const startSecondInning = async (req, res) => {
                 type: "",
                 fielder: ""
             },
-            onStrike: false
+            onStrike: false,
+            onNonStrike: false,
+            yetToBat: true
         }));
 
         // Prepare team1 as bowlers for second inning
@@ -198,7 +203,8 @@ export const startSecondInning = async (req, res) => {
             maidenOvers: 0,
             runsGiven: 0,
             wicketsTaken: 0,
-            economyRate: 0
+            economyRate: 0,
+            isBowling: false
         }));
 
         // Create second inning
@@ -217,7 +223,7 @@ export const startSecondInning = async (req, res) => {
             oversDetails: [], // New overs for second inning
             striker: team2Batsmen[0]?.name,       // Set a new striker from team2
             nonStriker: team2Batsmen[1]?.name,    // Set a new non-striker from team2
-            currBowler: team1Bowlers[0]?.name     // Set the first bowler from team1
+            currBowler: team1Bowlers[10]?.name     // Set the first bowler from team1
         };
 
         // Add second inning to the match
@@ -244,7 +250,56 @@ export const startSecondInning = async (req, res) => {
 
 
 
+export const scoreUpdate = async (msg) => {
+    const { matchId, run, ballsFaced, currentBowler, currentBatsman } = msg;
 
-export const updateMatchScore = async (req, res) => {
+    try {
+        const match = await Match.findById(matchId);
+
+        if (!match) {
+            console.error('Match not found');
+            return;
+        }
+
+        // {
+        //     run: '1',
+        //     ballsFaced: 1,
+        //     matchId: '6700dd9ab1477160f0847829',
+        //     currentBowler: { name: 'Siraj', id: '6700dd9ab1477160f0847840' },
+        //     currentBatsman: { name: 'Bumrah', id: '6700dd9ab1477160f0847835' }
+        //   }
+
+        const currentInning = match.innings[match.currentInning - 1];
+
+        // Update the team score
+        currentInning.teamScore += parseInt(run);
+
+        const batsmanIndex = currentInning.teamBatsmen.findIndex(batsman => batsman._id.toString() === currentBatsman.id);
+
+        if (batsmanIndex !== -1) {
+            currentInning.teamBatsmen[batsmanIndex].runs += parseInt(run); // Update the batsman's runs
+            currentInning.teamBatsmen[batsmanIndex].ballsFaced += parseInt(ballsFaced); // Update balls faced
+        } else {
+            console.error('Batsman not found');
+        }
+
+        // Update the bowler
+        const bowlerIndex = currentInning.teamBowlers.findIndex(bowler => bowler._id.toString() === currentBowler.id);
+
+        if (bowlerIndex !== -1) {
+            currentInning.teamBowlers[bowlerIndex].runsGiven += parseInt(run); // Update the bowler's runs conceded
+            currentInning.teamBowlers[bowlerIndex].ballBowled += 1; // Assuming you're tracking balls bowled
+        } else {
+            console.error('Bowler not found');
+        }
+
+        // Save the updated match
+        const updatedMatch = await match.save();
+        // console.log(updatedMatch);
+        
+
+    } catch (error) {
+        console.error('Failed to update score:', error);
+    }
 
 };
